@@ -1,6 +1,13 @@
 <!DOCTYPE html>
 <!--
     Chris Gonzalez 2017 - jQueryUI Mobile Site
+
+    Instructions:
+    Create a small site with jQuery Mobile with a template (at least 3 swatches), 
+    navigation, pages, panels, and some widgets. The site can be around a topic of 
+    your choice, but should be geared towards users on mobile devices. You should 
+    also pick a topic that lends to touching over clicking. We will be covering 
+    multi-touch support over the next couple classes.
 -->
 <html>
     <head>
@@ -14,6 +21,7 @@
         <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css" />
         <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
         <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script> 
+        <script src="js/app.js" type="text/javascript"></script>
         <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
         <link href="css/stylesheet.css" rel="stylesheet" type="text/css"/>
 
@@ -51,7 +59,7 @@
             <div role="main" class="ui-content">
                 <a href="#links-panel-homepage" 
                    class="ui-btn ui-corner-all ui-btn-inline ui-btn-icon-left ui-icon-bars">Menu</a>
-                <img src="img/favicon.png" id="mainLogo" alt="Logo" height="60" width="60"/>
+                <img src="img/favicon.png" class="center-img" alt="Logo" height="60" width="60"/>
                 <h2>                   
                     We will guide you towards catching your DREAM fish.
                 </h2>
@@ -62,7 +70,12 @@
                     list. Whether you're chasing muskie, northern pike, walleye,
                     bass, etc, our guides are ready to help. 
                 </p>
-                <img src="img/homepage-img.jpg" alt="Monster Muskie" id="homepage-img"/>
+                <div data-role="popup" id="popup-homepage-img" data-arrow="true">
+                    <p>Want to catch a monster like this? We can help!</p>
+                </div>  
+                
+                <img src="img/homepage-img.jpg" alt="Monster Muskie"  class="center-img" id="homepage-img"/>
+                           
                 <br>
             </div><!-- /content -->
 
@@ -99,8 +112,10 @@
 
             <div role="main" class="ui-content">
                 <a href="#links-panel-register-page" 
-                   class="ui-btn ui-corner-all ui-btn-inline ui-btn-icon-left ui-icon-bars">Menu</a>
-
+                   class="ui-btn ui-corner-all ui-btn-inline ui-btn-icon-left ui-icon-bars">
+                    Menu
+                </a>
+                <img src="img/favicon.png" class="center-img" alt="Logo" height="60" width="60"/>
                 <h2>
                     Register
                 </h2>   
@@ -123,7 +138,11 @@
                         </li>
                         <li class="ui-field-contain">
                             <label for="register-date">Date:</label>
-                            <input type="date" id="register-date" name="register-date" data-role="date">
+                            <input type="date" id="register-date" name="register-date" data-role="date" required="required">
+                        </li>
+                        <li class="ui-field-contain">
+                            <label for="register-location">Location:</label>
+                            <input id="regiser-location" type="text" name="regiser-location" placeholder="location" required="required">
                         </li>
                         <li class="ui-field-contain">
                             <label for="comments">Comments:</label>
@@ -178,7 +197,8 @@
                     class="ui-btn ui-corner-all ui-btn-inline ui-btn-icon-left ui-icon-bars btn-center">
                         Menu
                     </a>
-                </div>                                
+                </div>       
+                <img src="img/favicon.png" class="center-img" alt="Logo" height="60" width="60"/>
                 <h2>
                     Photos
                 </h2>
@@ -210,14 +230,14 @@
                        class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right">
                         Close
                     </a>
-                    <img class="popphoto" src="img/lightbox-img1.jpg" style="max-height:512px;" alt="Smallmouth Bass">
+                    <img class="popphoto"  src="img/lightbox-img1.jpg" style="max-height:512px;" alt="Smallmouth Bass">                                    
                 </div>
                 <div data-role="popup" id="popup-img2" data-overlay-theme="b" data-theme="b" data-corners="false">
                     <a href="#" data-rel="back" 
                        class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right">
                         Close
                     </a>
-                    <img class="popphoto" src="img/lightbox-img2.jpg" style="max-height:512px;" alt="Walleye">
+                    <img class="popphoto" src="img/lightbox-img2.jpg" style="max-height:512px;" alt="Walleye">                                
                 </div>
                 <div data-role="popup" id="popup-img3" data-overlay-theme="b" data-theme="b" data-corners="false">
                     <a href="#" data-rel="back" 
@@ -287,6 +307,7 @@
                    class="ui-btn ui-corner-all ui-btn-inline ui-btn-icon-left ui-icon-bars">
                     Menu
                 </a>
+                <img src="img/favicon.png" class="center-img" alt="Logo" height="60" width="60"/>
                 <h2>
                     About
                 </h2>
@@ -299,8 +320,7 @@
                     <br>
                     <br>
                     Our team is familiar with all of the well-known water bodies of 
-                    Northern Wisconsin (as well as some unknown ones). Water bodies 
-                    such as:
+                    Wisconsin (as well as some unknown ones). Water bodies such as:
                 
                 </p>
                 <ul>
@@ -308,13 +328,13 @@
                         Lake Michigan
                     </li>
                     <li>
-                        
+                        Lake Winnebago
                     </li>
                     <li>
-                        
+                        Big St. Germain Lake
                     </li>
                     <li>
-                        
+                        Eagle River
                     </li>
                     <li>
                         ...and many more!
@@ -341,6 +361,7 @@
             </div><!-- /header -->
 
             <div role="main" class="ui-content" data-theme="c">
+                <img src="img/favicon.png" class="center-img" alt="Logo" height="60" width="60"/>
                 <h2>
                     Thank you for registering. We will get back to you within 
                     48 hours. 

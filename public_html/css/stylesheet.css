@@ -1,8 +1,3 @@
-/*
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
-*/
 /* 
     Created on : Oct 3, 2017, 11:49:22 AM
     Author     : cgonz
@@ -15,7 +10,7 @@ h2{
     text-align: center;
 }
 
-#mainLogo,#homepage-img{
+.center-img,figure.center-img{
     display: block;
     margin-left: auto;
     margin-right: auto 
@@ -33,7 +28,11 @@ ul{
 menu-btn{
     width: 50px;
 }
-/*Created to center buttons of my choice*/
-a.btn-center{
+
+a.btn-center, figcaption{
     text-align: center;
+}
+
+#about-page{
+    font-size: 1.2em;
 }
