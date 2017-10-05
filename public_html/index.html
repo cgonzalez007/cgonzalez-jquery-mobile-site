@@ -13,12 +13,34 @@
         <link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
         <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css" />
         <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
-        <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>   
+        <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script> 
+        <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+        <link href="css/stylesheet.css" rel="stylesheet" type="text/css"/>
+
         <link rel="icon" type="image/png" href="img/favicon.png" />
     </head>
     <body>
+
+
         <!-- Homepage -->
-        <div data-role="page" id="hompage">
+        <div data-role="page" id="homepage" data-theme="b">                
+            <div data-role="panel" id="links-panel-homepage" data-theme="a">
+                <ul data-role="listview">
+                    <li>
+                        <a href="#homepage">Home</a>
+                    </li>
+                    <li>
+                        <a href="#register-page">Register</a>
+                    </li>
+                    <li>
+                        <a href="#photo-page">Photos</a>
+                    </li>
+                    <li>
+                        <a href="#about-page">About</a>
+                    </li>
+                </ul>
+
+            </div><!-- /panel -->
 
             <div data-role="header">
                 <h1>
@@ -27,28 +49,96 @@
             </div><!-- /header -->
 
             <div role="main" class="ui-content">
-                <h2>
-                    We will help you catch the BIGGUMS you dream of.
+                <a href="#links-panel-homepage" 
+                   class="ui-btn ui-corner-all ui-btn-inline ui-btn-icon-left ui-icon-bars">Menu</a>
+                <img src="img/favicon.png" id="mainLogo" alt="Logo" height="60" width="60"/>
+                <h2>                   
+                    We will guide you towards catching your DREAM fish.
                 </h2>
-
+                <p>
+                    Our expert anglers with several years of experience 
+                    will guide you to the right spots, and share their knowledge
+                    to make sure you catch that one fish on your bucket
+                    list. Whether you're chasing muskie, northern pike, walleye,
+                    bass, etc, our guides are ready to help. 
+                </p>
+                <img src="img/homepage-img.jpg" alt="Monster Muskie" id="homepage-img"/>
+                <br>
             </div><!-- /content -->
 
             <div data-role="footer" data-theme="a">
                 <h4>
                     2017 Chris Gonzalez 
                 </h4>
-            </div><!-- /footer -->
-        </div><!-- /page one -->
+            </div><!-- /footer -->          
+        </div><!-- /homepage -->
 
-        <!-- -->
-        <div data-role="page" id="two" data-theme="a">
+        <!--register page -->
+        <div data-role="page" id="register-page" data-theme="b">
+            <div data-role="panel" id="links-panel-register-page">
+                <ul data-role="listview">
+                    <li>
+                        <a href="#homepage">Home</a>
+                    </li>
+                    <li>
+                        <a href="#register-page">Register</a>
+                    </li>
+                    <li>
+                        <a href="#photo-page">Photos</a>
+                    </li>
+                    <li>
+                        <a href="#about-page">About</a>
+                    </li>
+                </ul>
+
+            </div><!-- /panel -->
 
             <div data-role="header">
                 <h1>NW Guide Service</h1>
             </div><!-- /header -->
 
             <div role="main" class="ui-content">
-                
+                <a href="#links-panel-register-page" 
+                   class="ui-btn ui-corner-all ui-btn-inline ui-btn-icon-left ui-icon-bars">Menu</a>
+
+                <h2>
+                    Register
+                </h2>   
+
+                <form>
+                    <ul data-role="listview" data-inset="true">
+
+                        <li class="ui-field-contain">
+                            <label for="first-name" >First name:</label>
+                            <input id="first-name" type="text" name="first-name" placeholder="first name" required="required">
+                        </li>
+                        <li class="ui-field-contain">
+                            <label for="last-name">Last name:</label>
+                            <input id="last-name" type="text" name="last-name" placeholder="last name" required="required">
+                        </li>
+                        <li class="ui-field-contain">
+                            <label for="email-address">Email address:</label>
+                            <input id="email-address" type="email" name="email-address" placeholder="email address" required="required">
+                            <br>
+                        </li>
+                        <li class="ui-field-contain">
+                            <label for="register-date">Date:</label>
+                            <input type="date" id="register-date" name="register-date" data-role="date">
+                        </li>
+                        <li class="ui-field-contain">
+                            <label for="comments">Comments:</label>
+                            <textarea cols="40" rows="8" name="comments" id="comments"></textarea>
+                        </li>
+                        <li class="ui-field-contain">                        
+                            <div class="ui-block-b">
+                                <a href="#confirmation-page" 
+                                   class="ui-btn ui-corner-all "  data-rel="dialog" data-transition="pop">
+                                    Submit
+                                </a>
+                            </div>
+                        </li>
+                    </ul>
+                </form>
             </div><!-- /content -->
 
             <div data-role="footer" data-theme="a">
@@ -56,19 +146,109 @@
                     2017 Chris Gonzalez 
                 </h4>
             </div><!-- /footer -->
-        </div><!-- /page two -->
+        </div><!-- /register page -->
 
-        <!-- Start of third page: #popup -->
-        <div data-role="page" id="confirmation">
+        <!--photo page -->
+        <div data-role="page" id="photo-page" data-theme="c">
+            <div data-role="panel" id="links-panel-photo-page">
+                <ul data-role="listview">
+                    <li>
+                        <a href="#homepage">Home</a>
+                    </li>
+                    <li>
+                        <a href="#register-page">Register</a>
+                    </li>
+                    <li>
+                        <a href="#photo-page">Photos</a>
+                    </li>
+                    <li>
+                        <a href="#about-page">About</a>
+                    </li>
+                </ul>
 
-            <div data-role="header" data-theme="b">
-                <h1>Dialog</h1>
+            </div><!-- /panel -->
+
+            <div data-role="header">
+                <h1>NW Guide Service</h1>
             </div><!-- /header -->
 
             <div role="main" class="ui-content">
-                <h2>Popup</h2>
-                <p>I have an id of "popup" on my page container and only look like a dialog because the link to me had a <code>data-rel="dialog"</code> attribute which gives me this inset look and a <code>data-transition="pop"</code> attribute to change the transition to pop. Without this, I'd be styled as a normal page.</p>
-                <p><a href="#one" data-rel="back" class="ui-btn ui-shadow ui-corner-all ui-btn-inline ui-icon-back ui-btn-icon-left">Back to page "one"</a></p>
+                <div style="width: 100%;">                 
+                    <a href="#links-panel-photo-page" 
+                    class="ui-btn ui-corner-all ui-btn-inline ui-btn-icon-left ui-icon-bars btn-center">
+                        Menu
+                    </a>
+                </div>                                
+                <h2>
+                    Photos
+                </h2>
+                <br>
+                <div style="text-align: center;">
+                    <a href="#popup-img1" data-rel="popup" data-position-to="window" data-transition="fade">
+                    <img class="popphoto" src="img/lightbox-img1.jpg" alt="Smallmouth Bass" style="width:30%">
+                    </a>
+                    <a href="#popup-img2" data-rel="popup" data-position-to="window" data-transition="fade">
+                        <img class="popphoto" src="img/lightbox-img2.jpg" alt="Walleye" style="width:30%">
+                    </a>
+                    <a href="#popup-img3" data-rel="popup" data-position-to="window" data-transition="fade">
+                        <img class="popphoto" src="img/lightbox-img3.jpg" alt="Muskellunge" style="width:30%">
+                    </a>
+                </div>
+                <div style="text-align: center;">
+                    <a href="#popup-img4" data-rel="popup" data-position-to="window" data-transition="fade">
+                    <img class="popphoto" src="img/lightbox-img4.jpg" alt="Northern Pike" style="width:30%">
+                    </a>
+                    <a href="#popup-img5" data-rel="popup" data-position-to="window" data-transition="fade">
+                        <img class="popphoto" src="img/lightbox-img5.jpg" alt="Channel Catfish" style="width:30%">
+                    </a>
+                    <a href="#popup-img6" data-rel="popup" data-position-to="window" data-transition="fade">
+                        <img class="popphoto" src="img/lightbox-img6.jpg" alt="Crappie" style="width:30%">
+                    </a>
+                </div>               
+                <div data-role="popup" id="popup-img1" data-overlay-theme="b" data-theme="b" data-corners="false">
+                    <a href="#" data-rel="back" 
+                       class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right">
+                        Close
+                    </a>
+                    <img class="popphoto" src="img/lightbox-img1.jpg" style="max-height:512px;" alt="Smallmouth Bass">
+                </div>
+                <div data-role="popup" id="popup-img2" data-overlay-theme="b" data-theme="b" data-corners="false">
+                    <a href="#" data-rel="back" 
+                       class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right">
+                        Close
+                    </a>
+                    <img class="popphoto" src="img/lightbox-img2.jpg" style="max-height:512px;" alt="Walleye">
+                </div>
+                <div data-role="popup" id="popup-img3" data-overlay-theme="b" data-theme="b" data-corners="false">
+                    <a href="#" data-rel="back" 
+                       class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right">
+                        Close
+                    </a>
+                    <img class="popphoto" src="img/lightbox-img3.jpg" style="max-height:512px;" alt="Muskellunge">
+                </div>
+                <div data-role="popup" id="popup-img4" data-overlay-theme="b" data-theme="b" data-corners="false">
+                    <a href="#" data-rel="back" 
+                       class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right">
+                        Close
+                    </a>
+                    <img class="popphoto" src="img/lightbox-img4.jpg" style="max-height:512px;" alt="Northern Pike">
+                </div>
+                <div data-role="popup" id="popup-img5" data-overlay-theme="b" data-theme="b" data-corners="false">
+                    <a href="#" data-rel="back" 
+                       class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right">
+                        Close
+                    </a>
+                    <img class="popphoto" src="img/lightbox-img5.jpg" style="max-height:512px;" alt="Channel Catfish">
+                </div>
+                <div data-role="popup" id="popup-img6" data-overlay-theme="b" data-theme="b" data-corners="false">
+                    <a href="#" data-rel="back" 
+                       class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right">
+                        Close
+                    </a>
+                    <img class="popphoto" src="img/lightbox-img6.jpg" style="max-height:512px;" alt="Crappie">
+                </div>
+
+
             </div><!-- /content -->
 
             <div data-role="footer" data-theme="a">
@@ -76,6 +256,104 @@
                     2017 Chris Gonzalez 
                 </h4>
             </div><!-- /footer -->
-        </div><!-- /page popup -->
+        </div><!-- /photo page -->
+
+        <!--about page -->
+        <div data-role="page" id="about-page" data-theme="a">
+            <div data-role="panel" id="links-panel-about-page">
+                <ul data-role="listview">
+                    <li>
+                        <a href="#homepage">Home</a>
+                    </li>
+                    <li>
+                        <a href="#register-page">Register</a>
+                    </li>
+                    <li>
+                        <a href="#photo-page">Photos</a>
+                    </li>
+                    <li>
+                        <a href="#about-page">About</a>
+                    </li>
+                </ul>
+
+            </div><!-- /panel -->
+
+            <div data-role="header">
+                <h1>NW Guide Service</h1>
+            </div><!-- /header -->
+
+            <div role="main" class="ui-content">
+                <a href="#links-panel-about-page" 
+                   class="ui-btn ui-corner-all ui-btn-inline ui-btn-icon-left ui-icon-bars">
+                    Menu
+                </a>
+                <h2>
+                    About
+                </h2>
+                <p>
+                    Headquartered in Green Bay, WI, we believe every angler should have
+                    the chance to catch to catch a fish of a lifetime. Apart from providing
+                    you with knowledge and tips, our team of professionals will provide the
+                    necessary equipment (if need be) to ensure you are well-prepared to 
+                    tackle any monster that bites into your lure. 
+                    <br>
+                    <br>
+                    Our team is familiar with all of the well-known water bodies of 
+                    Northern Wisconsin (as well as some unknown ones). Water bodies 
+                    such as:
+                
+                </p>
+                <ul>
+                    <li>
+                        Lake Michigan
+                    </li>
+                    <li>
+                        
+                    </li>
+                    <li>
+                        
+                    </li>
+                    <li>
+                        
+                    </li>
+                    <li>
+                        ...and many more!
+                    </li>
+                    
+                </ul>
+                    
+            </div><!-- /content -->
+
+            <div data-role="footer" data-theme="a">
+                <h4>
+                    2017 Chris Gonzalez 
+                </h4>
+            </div><!-- /footer -->
+        </div><!-- /about page -->
+
+        <!-- Confirmation pop-up-->
+        <div data-role="page" id="confirmation-page" data-theme="c">
+
+            <div data-role="header" data-theme="c">
+                <h1>
+                    Register Successful
+                </h1>
+            </div><!-- /header -->
+
+            <div role="main" class="ui-content" data-theme="c">
+                <h2>
+                    Thank you for registering. We will get back to you within 
+                    48 hours. 
+                    <br>
+                    -NW Guide Service Team
+                    <br>
+                    <br>
+                    <a href="#homepage" class="ui-btn ui-corner-all ui-btn-inline ui-icon">
+                        Back to homepage
+                    </a>
+                </h2>
+            </div><!-- /content -->
+        </div><!-- /confirm popup -->
+
     </body>
 </html>

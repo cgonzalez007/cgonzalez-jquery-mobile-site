@@ -7,4 +7,33 @@ and open the template in the editor.
     Created on : Oct 3, 2017, 11:49:22 AM
     Author     : cgonz
 */
+body {
+    font-family: Montserrat;
+}
 
+h2{
+    text-align: center;
+}
+
+#mainLogo,#homepage-img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto 
+}
+
+#homepage-img{
+    width:300px;
+    height:200px;
+}
+
+ul{
+    list-style: none;
+}
+
+menu-btn{
+    width: 50px;
+}
+/*Created to center buttons of my choice*/
+a.btn-center{
+    text-align: center;
+}
